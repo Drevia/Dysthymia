@@ -11,8 +11,10 @@ public class AttackState : StateMachineBehaviour
     {
         ai = animator.GetComponent<EnemyAI>();
         InventoryPlayer.instance.isTouched = true;
-        
-        
+
+        MoveCharacter.instance.DeathByMonster(animator.transform);
+        ai.agent.isStopped = true;
+        ai.isKillingPlayer = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -11,6 +11,7 @@ public class EnemyAI : MonoBehaviour
     public float maxDist = 10;
     public float minDist = 5;
     public EnemyState state;
+    Rigidbody rb;
 
     public NavMeshAgent agent;
     CapsuleCollider col;
@@ -19,7 +20,7 @@ public class EnemyAI : MonoBehaviour
 
     public Transform coneOrigin;
 
-
+    public bool isKillingPlayer;
 
     #region AI ennemi
 
@@ -120,6 +121,14 @@ public class EnemyAI : MonoBehaviour
         {
             // Avoid any reload.
             Debug.Log("t'es mort");
+        }
+
+        if (isKillingPlayer)
+        {
+            Vector3 dir = player.position - transform.position;
+            dir.y = 0;
+            Quaternion wantedRotation = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, wantedRotation, 90 * Time.deltaTime);
         }
     }
 
@@ -227,6 +236,10 @@ public class EnemyAI : MonoBehaviour
     {
         // Lancer anim mort
         anim.SetTrigger("isKilled");
+        GetComponent<BoxCollider>().enabled = false;
+        new WaitForSeconds(2);
+        MoveCharacter.instance.canPlay = true;
+        rb.useGravity = true;
     }
 
 

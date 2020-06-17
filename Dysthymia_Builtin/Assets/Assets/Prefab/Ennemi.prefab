@@ -4806,7 +4806,6 @@ GameObject:
   - component: {fileID: 5011892487092209734}
   - component: {fileID: 7416757678702871630}
   - component: {fileID: 4714773825658758516}
-  - component: {fileID: 2513029505394794707}
   - component: {fileID: 1963263174}
   m_Layer: 0
   m_Name: Ennemi
@@ -4883,11 +4882,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 768
   coneOrigin: {fileID: 2956583610198637406}
+  isKillingPlayer: 0
   walkingDist: 0
   waypoints: []
   currentWaypoint: 0
   startWaitTime: 3
   attackDistance: 0
+  killTrigger: {fileID: 306636398}
+  isKilled: 0
 --- !u!54 &4714773825658758516
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4904,19 +4906,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &2513029505394794707
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2039585673991016226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: -0.97}
 --- !u!195 &1963263174
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4948,6 +4937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5615040879024142328}
+  - component: {fileID: 306636398}
   m_Layer: 10
   m_Name: HitZone
   m_TagString: EnemyHitZone
@@ -4969,6 +4959,19 @@ Transform:
   m_Father: {fileID: 8881262731386359920}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &306636398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847655521324302134}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.39, z: -0.61}
 --- !u!1 &5011892487082867200
 GameObject:
   m_ObjectHideFlags: 0
@@ -12037,15 +12040,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5872bd43612be5a41850db0bddbd2144, type: 3}
---- !u!4 &5006512736236368895 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5872bd43612be5a41850db0bddbd2144,
-    type: 3}
-  m_PrefabInstance: {fileID: 1464850661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8296172668298756588 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5872bd43612be5a41850db0bddbd2144,
+    type: 3}
+  m_PrefabInstance: {fileID: 1464850661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5006512736236368895 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5872bd43612be5a41850db0bddbd2144,
     type: 3}
   m_PrefabInstance: {fileID: 1464850661}
   m_PrefabAsset: {fileID: 0}

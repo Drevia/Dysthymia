@@ -39,7 +39,7 @@ public class InventoryPlayer : MonoBehaviour
 
     bool firstTrigger =false;
 
-    bool onObjectTrigger = false;
+    public bool onObjectTrigger = false;
 
     GameObject actualObject = null;
 
@@ -150,15 +150,7 @@ public class InventoryPlayer : MonoBehaviour
                 }
             }
 
-            if (actualObject.tag == "Porte" || actualObject.tag == "Porte2")
-            {
-                
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    Debug.Log("Ouverture porte");
-                    //FindObjectOfType<SoundManager>().Play("TocToc");
-                }
-            }
+            
             else if (actualObject.tag == "casier")
             {
                 

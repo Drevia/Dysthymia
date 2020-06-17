@@ -9,6 +9,7 @@ using System.Collections;
 
 public class MoveCharacter : MonoBehaviour
 {
+    public static MoveCharacter instance;
     CharacterController characterController;
 
     public float walkSpeed = 6.0f;
@@ -29,8 +30,10 @@ public class MoveCharacter : MonoBehaviour
     public Animator anim;
     float h, v;
     public bool isGrounded;
+
     void OnEnable()
     {
+        instance = this;
         characterController = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         cam = Camera.main.transform;
@@ -40,7 +43,7 @@ public class MoveCharacter : MonoBehaviour
 
     public bool isRunning = false;
     public bool canPlay = true;
-
+    public bool isDead;
     void Update()
     {
         if (GameManager.gameIsPaused)
@@ -120,13 +123,17 @@ public class MoveCharacter : MonoBehaviour
 
             //transform.Rotate(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
         }
-        if (InventoryPlayer.instance.isTouched == true)
-        {
-            anim.SetTrigger("isTouched");
-
-        }
-
+        
     }
+
+
+    public void DeathByMonster(Transform monster)
+    {
+        anim.SetTrigger("isTouched");
+        canPlay = false;
+    }
+
+
     void OrientToSpeed()
     {
 
@@ -144,6 +151,9 @@ public class MoveCharacter : MonoBehaviour
     {
         anim.SetBool("IsKilled", true);
     }
+
+
+
 
     /*public void PlayerInCinematic(bool cinematic)
     {

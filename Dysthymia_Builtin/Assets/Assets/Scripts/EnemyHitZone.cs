@@ -6,6 +6,7 @@ public class EnemyHitZone : MonoBehaviour
 {
     EnemyAI aiScript;
     MoveCharacter mc;
+    GameObject actualEnemy;
 
     bool _locked;
     bool locked
@@ -26,6 +27,7 @@ public class EnemyHitZone : MonoBehaviour
         {
             aiScript = other.GetComponentInParent<EnemyAI>();
             UIManager._instance.ToggleEnemyKillZone(true);
+            actualEnemy = other.GetComponentInParent<EnemyAI>().gameObject;
 
         }
     }
@@ -50,6 +52,7 @@ public class EnemyHitZone : MonoBehaviour
                 // Empecher de controler ton perso (can play false ?)
                 KillEnemy();
                 //mc.canPlay = false;
+                
             }
         }
     }
