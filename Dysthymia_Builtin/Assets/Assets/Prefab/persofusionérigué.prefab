@@ -647,13 +647,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   arme: {fileID: 586021075232804884}
-  gotKey: 0
-  gotKnife: 0
   interactionDistance: 1
-  playerTransform: {fileID: 0}
   isReading: 0
   displayInfo: {fileID: 0}
   actionRay: {fileID: 1129850907}
+  discoverHidding: 0
+  isTouched: 0
+  onObjectTrigger: 0
 --- !u!114 &6533338729138663885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,8 +671,15 @@ MonoBehaviour:
   jumpSpeed: 8
   gravity: 20
   rotationSpeed: 3
+  camForward: {x: 0, y: 0, z: 0}
+  camRight: {x: 0, y: 0, z: 0}
+  cam: {fileID: 0}
+  moveDirection: {x: 0, y: 0, z: 0}
   anim: {fileID: 0}
+  isGrounded: 0
   isRunning: 0
+  canPlay: 1
+  isDead: 0
 --- !u!65 &8296172667566204388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -794,6 +801,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2345,26 +2353,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2292789861829091446}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
-        type: 3}
-      propertyPath: m_Name
-      value: Arme
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
-        type: 3}
-      propertyPath: m_Layer
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
-        type: 3}
-      propertyPath: m_TagString
-      value: weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2425,6 +2413,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: be73d53d50f56da42be05fc1417eb826, type: 2}
+    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
+        type: 3}
+      propertyPath: m_Name
+      value: Arme
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f1ae07f40cc87a84d897f37a4e5ef4b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ae07f40cc87a84d897f37a4e5ef4b5, type: 3}
 --- !u!1 &586021075232804884 stripped
