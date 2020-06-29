@@ -41,12 +41,12 @@ public class SoundManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.M))
+        /*if(Input.GetKeyDown(KeyCode.M))
         {
 
             Play("Vide");
             Play("Ambiance");
-        }
+        }*/
     }
 
     public void Play(string name)

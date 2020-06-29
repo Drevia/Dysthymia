@@ -13,31 +13,50 @@ public class VisionCone : MonoBehaviour
     public LayerMask groundMask;
     public Transform visionOrigin;
     public Vector3 lastSeenPosition;
+    public EnemyAI ai;
+    public BoxCollider killTrigger;
     private void Start()
     {
         visionCone = GetComponent<MeshCollider>();
         if (visionOrigin == null)
             visionOrigin = transform;
+
+        ai = GetComponentInParent<EnemyAI>();
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            Vector3 dir = other.transform.position - visionOrigin.transform.position;
-            dir.y = 0;
-            Ray ray = new Ray(visionOrigin.transform.position, dir);
+        
+            if (other.CompareTag("Player") && !killTrigger)
+            {
 
-            //Debug.Log(ray.ToString());
-            if (Physics.Raycast(ray, dir.magnitude, groundMask))
-            {
-                isSeeingPlayer = false;
+                Vector3 dir = other.transform.position + Vector3.up - transform.position;
+                Ray ray = new Ray(visionOrigin.transform.position, dir);
+
+
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, dir.magnitude + 10, groundMask))
+                {
+                    if (hit.collider.CompareTag("Player"))
+                    {
+                        ai.state.lastSeenPosition = other.transform.position;
+                        ai.state.joueurVu = true;
+                        Debug.Log("touché");
+                    }
+                    else
+                    {
+                        ai.state.joueurVu = false;
+                        Debug.Log("touch" + other.tag);
+                    }
+                }
+                else
+                {
+
+                    ai.state.joueurVu = false;
+                }
+
             }
-            else
-            {
-                isSeeingPlayer = true;
-            }
-        }
+        
     }
 
     private void OnTriggerExit(Collider other)

@@ -13,6 +13,8 @@ public class PatrolState : StateMachineBehaviour
         animator.SetBool("DestReach", false);
         ai = animator.GetComponent<EnemyAI>();
         ai.WalkToNextPatrolPoint();
+        ai.agent.acceleration = 1f;
+        ai.agent.speed = 1.5f;
         
     }
 

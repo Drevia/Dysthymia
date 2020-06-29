@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public static GameManager _instance;
     public bool DoorGardienClose = false;
     public bool ennemyInZone;
+    public bool enemyKilled = false;
+    public GameObject porteClose, porteOpen;
 
     [HideInInspector]
     public bool isHidden = false;
@@ -102,6 +104,13 @@ public class GameManager : MonoBehaviour
         {
             HideToSpot(null);
 
+        }
+
+        if (enemyKilled == true)
+        {
+            porteClose.SetActive(false);
+            porteOpen.SetActive(true);
+            porteOpen.GetComponent<GetSound>().Play("Grincement");
         }
     }
 

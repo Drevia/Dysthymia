@@ -1,0 +1,354 @@
+fileFormatVersion: 2
+guid: b14e08a085ea9514ebb59e37922e09ce
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'Head' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: monstre2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Alien001
+      parentName: monstre2(Clone)
+      position: {x: 1.6645331, y: 0, z: -0.024085123}
+      rotation: {x: 0.5, y: -0.50000006, z: -0.49999994, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienHub004
+      parentName: monstre2(Clone)
+      position: {x: 1.6645331, y: 0.8055473, z: -0.092241116}
+      rotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienLLeg004
+      parentName: AlienHub004
+      position: {x: -0, y: 0, z: 0.0710791}
+      rotation: {x: -0.3195034, y: 0.9465751, z: -0.03011401, w: 0.031723976}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienLLeg005
+      parentName: AlienLLeg004
+      position: {x: -0.41345477, y: 0, z: 0}
+      rotation: {x: 0.002015225, y: -0.03427035, z: 0.4424296, w: 0.89614594}
+      scale: {x: 1.0000001, y: 0.99999964, z: 1.0000001}
+    - name: AlienLLeg006
+      parentName: AlienLLeg005
+      position: {x: -0.23820285, y: -0.0000011968613, z: 0.00000030517577}
+      rotation: {x: 0.03282702, y: -0.087813854, z: -0.51186395, w: 0.85393584}
+      scale: {x: 0.9999971, y: 1.0000027, z: 1.0000008}
+    - name: AlienLLegAnkle001
+      parentName: AlienLLeg006
+      position: {x: -0.33639652, y: 0, z: -0.00000015258789}
+      rotation: {x: -0.16145901, y: 0.046200372, z: -0.3305042, w: 0.928743}
+      scale: {x: 1.0000067, y: 0.9999946, z: 0.9999986}
+    - name: AlienRLeg004
+      parentName: AlienHub004
+      position: {x: -0.000000076293944, y: -0.000000009536743, z: -0.0758403}
+      rotation: {x: -0.040197782, y: 0.99863124, z: -0.00345352, w: -0.03328633}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: AlienRLeg005
+      parentName: AlienRLeg004
+      position: {x: -0.41393694, y: -0.0000000047683715, z: 0}
+      rotation: {x: 0.016669272, y: 0.07179353, z: 0.686512, w: 0.7233734}
+      scale: {x: 1.000001, y: 0.9999992, z: 1.0000002}
+    - name: AlienRLeg006
+      parentName: AlienRLeg005
+      position: {x: -0.2498371, y: -0.0000013160706, z: -0.00000045776366}
+      rotation: {x: -0.010169992, y: 0.0730285, z: -0.7588369, w: 0.6470934}
+      scale: {x: 1.0000005, y: 0.99999934, z: 1.0000002}
+    - name: AlienRLegAnkle001
+      parentName: AlienRLeg006
+      position: {x: -0.3178041, y: -0.000000038146972, z: 0}
+      rotation: {x: 0.16780339, y: -0.037641145, z: -0.56351644, w: 0.80800647}
+      scale: {x: 1.0000006, y: 0.99999946, z: 1.0000002}
+    - name: AlienSpine004
+      parentName: AlienHub004
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 7.10543e-15, y: 2.5571745e-14, z: 7.1054274e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienSpine005
+      parentName: AlienSpine004
+      position: {x: -0.2057569, y: -0.000000009536743, z: 0}
+      rotation: {x: 0, y: 1.2300171e-14, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienHub005
+      parentName: AlienSpine005
+      position: {x: -0.2057569, y: 0, z: 0}
+      rotation: {x: -7.1054274e-15, y: -1.3271574e-14, z: -7.1054274e-15, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienLArmCollarbone001
+      parentName: AlienHub005
+      position: {x: -0, y: -0.000000009536743, z: 0.034292754}
+      rotation: {x: 0.08579205, y: 0.7644759, z: 0.071254395, w: 0.6349324}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienLArm003
+      parentName: AlienLArmCollarbone001
+      position: {x: -0.14310211, y: 0, z: -0.000000076293944}
+      rotation: {x: 0.029335817, y: 0.3183597, z: -0.10178004, w: 0.94203365}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: AlienLArm004
+      parentName: AlienLArm003
+      position: {x: -0.29998076, y: 0.000000028610229, z: 0}
+      rotation: {x: -0.0021525628, y: 0.00417505, z: -0.249685, w: 0.9683157}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: AlienLArmPalm001
+      parentName: AlienLArm004
+      position: {x: -0.29712066, y: 0.00000045776366, z: 0.000000038146972}
+      rotation: {x: -0.57712954, y: 0.015849102, z: 0.045046642, w: 0.8152552}
+      scale: {x: 0.99999994, y: 1.000001, z: 0.9999992}
+    - name: AlienLArmDigit034
+      parentName: AlienLArmPalm001
+      position: {x: -0.05275238, y: -0.0080845645, z: 0.049429398}
+      rotation: {x: 0.48159298, y: 0.31126475, z: 0.14716539, w: 0.80593103}
+      scale: {x: 1, y: 1.0000002, z: 0.99999976}
+    - name: AlienLArmDigit035
+      parentName: AlienLArmDigit034
+      position: {x: -0.045987587, y: 0.000000038146972, z: 0}
+      rotation: {x: 0.09194883, y: 0.030397117, z: 0.20003553, w: 0.9749909}
+      scale: {x: 0.99999964, y: 0.9999999, z: 1.0000005}
+    - name: AlienLArmDigit036
+      parentName: AlienLArmDigit035
+      position: {x: -0.046303444, y: 0, z: 0}
+      rotation: {x: 0.09158641, y: 0.048351187, z: -0.18898001, w: 0.9765043}
+      scale: {x: 0.99999976, y: 0.999999, z: 1.0000013}
+    - name: AlienLArmDigit037
+      parentName: AlienLArmPalm001
+      position: {x: -0.06432426, y: -0.0026693726, z: 0.023997802}
+      rotation: {x: 0.059147928, y: -0.024487354, z: 0.0890554, w: 0.9939673}
+      scale: {x: 0.9999997, y: 1.0000014, z: 0.9999991}
+    - name: AlienLArmDigit038
+      parentName: AlienLArmDigit037
+      position: {x: -0.11971886, y: 0.000000038146972, z: 0.00000015258789}
+      rotation: {x: 0.08474368, y: 0.30484724, z: -0.06478173, w: 0.94640905}
+      scale: {x: 1.0000008, y: 1.0000013, z: 0.9999979}
+    - name: AlienLArmDigit039
+      parentName: AlienLArmDigit038
+      position: {x: -0.0765497, y: 0.00000015258789, z: -0.00000015258789}
+      rotation: {x: -0.039705127, y: -0.14345935, z: 0.09084823, w: 0.9846774}
+      scale: {x: 1.0000002, y: 1.0000017, z: 0.99999803}
+    - name: AlienLArmDigit040
+      parentName: AlienLArmPalm001
+      position: {x: -0.070439145, y: -0.00018226623, z: -0.018487854}
+      rotation: {x: 0.0000005215404, y: 0.0000007487832, z: -0.0000003427271, w: 1}
+      scale: {x: 1, y: 1.000001, z: 0.99999917}
+    - name: AlienLArmDigit041
+      parentName: AlienLArmDigit040
+      position: {x: -0.023532867, y: -0.000000038146972, z: 0.000000076293944}
+      rotation: {x: -0.03426844, y: 0.061835278, z: 0.25137952, w: 0.9653033}
+      scale: {x: 0.9999998, y: 1.0000012, z: 0.9999991}
+    - name: AlienLArmDigit042
+      parentName: AlienLArmDigit041
+      position: {x: -0.19483654, y: 0, z: 0.00000015258789}
+      rotation: {x: 0.034269832, y: -0.061834246, z: -0.25137955, w: 0.9653033}
+      scale: {x: 0.99999994, y: 1.000001, z: 0.99999917}
+    - name: AlienRArmCollarbone001
+      parentName: AlienHub005
+      position: {x: -0, y: 0, z: -0.034292754}
+      rotation: {x: -0.08579205, y: -0.7644759, z: 0.071254395, w: 0.6349324}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienRArm003
+      parentName: AlienRArmCollarbone001
+      position: {x: -0.14310226, y: 0.000000038146972, z: 0.00000015258789}
+      rotation: {x: -0.029335823, y: -0.3183598, z: -0.101780035, w: 0.94203365}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: AlienRArm004
+      parentName: AlienRArm003
+      position: {x: -0.29998076, y: 0.000000028610229, z: 0}
+      rotation: {x: 0.0021519668, y: -0.0041750167, z: -0.24968415, w: 0.96831596}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: AlienRArmPalm001
+      parentName: AlienRArm004
+      position: {x: -0.29712066, y: -0.0000004959106, z: -0.00000015258789}
+      rotation: {x: 0.56661046, y: -0.0011666587, z: 0.04237273, w: 0.8228948}
+      scale: {x: 1.0000004, y: 0.9999992, z: 1.0000005}
+    - name: AlienRArmDigit034
+      parentName: AlienRArmPalm001
+      position: {x: -0.052752227, y: -0.008084716, z: -0.049429398}
+      rotation: {x: -0.48159167, y: -0.31126446, z: 0.14716654, w: 0.8059317}
+      scale: {x: 1.0000002, y: 0.99999946, z: 1.0000004}
+    - name: AlienRArmDigit035
+      parentName: AlienRArmDigit034
+      position: {x: -0.045987625, y: -0.000000038146972, z: 0}
+      rotation: {x: -0.09195073, y: -0.030396909, z: 0.20003563, w: 0.97499067}
+      scale: {x: 1.0000005, y: 0.99999994, z: 0.99999946}
+    - name: AlienRArmDigit036
+      parentName: AlienRArmDigit035
+      position: {x: -0.04630356, y: 0, z: 0}
+      rotation: {x: -0.09158811, y: -0.04835097, z: -0.18898006, w: 0.97650415}
+      scale: {x: 1.0000002, y: 1.0000006, z: 0.9999988}
+    - name: AlienRArmDigit037
+      parentName: AlienRArmPalm001
+      position: {x: -0.064324185, y: -0.002669525, z: -0.023997573}
+      rotation: {x: -0.059147008, y: 0.024488669, z: 0.089055896, w: 0.9939673}
+      scale: {x: 1.0000007, y: 0.9999987, z: 1.0000007}
+    - name: AlienRArmDigit038
+      parentName: AlienRArmDigit037
+      position: {x: -0.119718894, y: 0, z: 0.00000015258789}
+      rotation: {x: -0.08474245, y: -0.30484727, z: -0.064780004, w: 0.9464092}
+      scale: {x: 0.9999994, y: 0.99999875, z: 1.0000019}
+    - name: AlienRArmDigit039
+      parentName: AlienRArmDigit038
+      position: {x: -0.07654953, y: -0.00000030517577, z: -0.00000015258789}
+      rotation: {x: 0.039705113, y: 0.1434599, z: 0.090849265, w: 0.9846772}
+      scale: {x: 1.0000001, y: 0.99999833, z: 1.0000015}
+    - name: AlienRArmDigit040
+      parentName: AlienRArmPalm001
+      position: {x: -0.0704393, y: -0.00018249512, z: 0.01848816}
+      rotation: {x: 0.00000055506837, y: 0.0000007320196, z: 0.0000003874297, w: 1}
+      scale: {x: 1.0000002, y: 0.9999993, z: 1.0000005}
+    - name: AlienRArmDigit041
+      parentName: AlienRArmDigit040
+      position: {x: -0.023532867, y: 0, z: -0.000000076293944}
+      rotation: {x: 0.03426992, y: -0.061834127, z: 0.25137982, w: 0.96530324}
+      scale: {x: 1.0000005, y: 0.999999, z: 1.0000006}
+    - name: AlienRArmDigit042
+      parentName: AlienRArmDigit041
+      position: {x: -0.19483668, y: 0.00000015258789, z: 0.00000015258789}
+      rotation: {x: -0.034268573, y: 0.0618355, z: -0.2513789, w: 0.9653034}
+      scale: {x: 1.0000002, y: 0.99999934, z: 1.0000005}
+    - name: AlienSpine003
+      parentName: AlienHub005
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 1.7903829e-14, y: -0.000000031331766, z: -0.20750122, w: 0.97823477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienHub006
+      parentName: AlienSpine003
+      position: {x: -0.21469222, y: 0, z: 0.00000015258789}
+      rotation: {x: -6.844212e-15, y: 0.00000003133176, z: 0.20750122, w: 0.97823477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienLLegPlatform001
+      parentName: monstre2(Clone)
+      position: {x: 1.4752363, y: -0.0027304243, z: 0.4629897}
+      rotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: AlienRLegPlatform001
+      parentName: monstre2(Clone)
+      position: {x: 1.8697385, y: 0.0370663, z: -0.09224096}
+      rotation: {x: 0.5000001, y: -0.50000006, z: -0.4999999, w: 0.49999997}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group42526
+      parentName: monstre2(Clone)
+      position: {x: 1.6695042, y: 1.4730781, z: 0.011751091}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

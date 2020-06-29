@@ -104,6 +104,7 @@ public class EnemyAI : MonoBehaviour
         {
             WalkToNextPatrolPoint();
             agent.stoppingDistance = 0.4f;
+            agent.speed = moveSpeed;
         }
 
         SetAnimator();
@@ -111,8 +112,9 @@ public class EnemyAI : MonoBehaviour
         if (state.joueurVu == true)
         {
             anim.SetBool("IsPatrol", false);
+            anim.SetBool("PlayerDetect", true);
             agent.isStopped = false;
-
+            Debug.Log("state vue");
             ChasePlayer();
 
         }
@@ -165,10 +167,13 @@ public class EnemyAI : MonoBehaviour
             Debug.Log("Hit from Player");
         }
 
+        if (other.tag == "Toc")
+        {
 
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    /*private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player") && !killTrigger)
         {
@@ -184,10 +189,12 @@ public class EnemyAI : MonoBehaviour
                 {
                     state.lastSeenPosition = other.transform.position;
                     state.joueurVu = true;
+                    Debug.Log("touché");
                 }
                 else
                 {
                     state.joueurVu = false;
+                    Debug.Log("pas touché");
                 }
             }
             else
@@ -197,7 +204,7 @@ public class EnemyAI : MonoBehaviour
             }
 
         }
-    }
+    }*/
 
     public void WalkToNextPatrolPoint()
     {
@@ -237,9 +244,9 @@ public class EnemyAI : MonoBehaviour
         // Lancer anim mort
         anim.SetTrigger("isKilled");
         GetComponent<BoxCollider>().enabled = false;
-        new WaitForSeconds(2);
-        MoveCharacter.instance.canPlay = true;
-        rb.useGravity = true;
+        
+        
+            
     }
 
 

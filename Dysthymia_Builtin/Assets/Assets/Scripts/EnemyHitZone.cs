@@ -51,8 +51,8 @@ public class EnemyHitZone : MonoBehaviour
                 aiScript.StopMove();
                 // Empecher de controler ton perso (can play false ?)
                 KillEnemy();
-                //mc.canPlay = false;
-                
+                mc.canPlay = false;
+                GameManager._instance.enemyKilled = true;
             }
         }
     }
@@ -64,8 +64,15 @@ public class EnemyHitZone : MonoBehaviour
         aiScript.GetComponent<Animator>().SetTrigger("isKilled");
         mc.anim.SetTrigger("KillAnim");
         aiScript.Die();
+        StartCoroutine("DyingMonster");
     }
 
+    IEnumerator DyingMonster()
+    {
+        yield return new WaitForSeconds(2);
+        EndKilling();
+        yield return null;
+    }
 
     public void EndKilling()
     {

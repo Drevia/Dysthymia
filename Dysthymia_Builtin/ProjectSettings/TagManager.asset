@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - PorteGardien
   - Non
+  - Toc
   layers:
   - Default
   - TransparentFX
