@@ -8,7 +8,7 @@ public class SwitchScene : MonoBehaviour
 
     public Animator transition;
     public float transitionTime = 1f;
-    /*void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
@@ -24,18 +24,6 @@ public class SwitchScene : MonoBehaviour
 
              
         } 
-    }*/
-
-    public void OnEnable()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            StartCoroutine(LoadLevel(2));
-        }
-        else
-        {
-            StartCoroutine(LoadLevel(1));
-        }
     }
 
     IEnumerator LoadLevel(int levelIndex)
