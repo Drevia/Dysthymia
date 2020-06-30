@@ -30,24 +30,27 @@ public class VisionCone : MonoBehaviour
             if (other.CompareTag("Player") && !killTrigger)
             {
 
-                Vector3 dir = other.transform.position + Vector3.up - transform.position;
+                Debug.Log("touché player");
+
+                //Vector3 dir = other.transform.position + Vector3.up - transform.position; // AVANT
+                Vector3 dir = other.transform.position - visionOrigin.transform.position; //Correction
                 Ray ray = new Ray(visionOrigin.transform.position, dir);
 
 
                 RaycastHit hit;
-                if (Physics.Raycast(ray, out hit, dir.magnitude + 10, groundMask))
-                {
-                    if (hit.collider.CompareTag("Player"))
+                    if (Physics.Raycast(ray, out hit, groundMask))
                     {
-                        ai.state.lastSeenPosition = other.transform.position;
-                        ai.state.joueurVu = true;
-                        Debug.Log("touché");
-                    }
-                    else
-                    {
-                        ai.state.joueurVu = false;
-                        Debug.Log("touch" + other.tag);
-                    }
+                        if (hit.collider.CompareTag("Player"))
+                        {
+                            ai.state.lastSeenPosition = other.transform.position;
+                            ai.state.joueurVu = true;
+                            Debug.Log("touché");
+                        }
+                        else
+                        {
+                            ai.state.joueurVu = false;
+                            Debug.Log("touch" + other.tag);
+                        }
                 }
                 else
                 {
